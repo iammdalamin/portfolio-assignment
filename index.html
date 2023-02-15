@@ -36,21 +36,45 @@
           <button
             class="btn btn-danger"
             type="button"
-            data-bs-toggle="dropdown"
-            aria-expanded="false"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvasRight"
+            aria-controls="offcanvasRight"
           >
             <i class="fas fa-bars"></i>
           </button>
-          <ul class="dropdown-menu dropdown-menu-end">
-            <li><a class="dropdown-item" href="#home">Home</a></li>
-            <li><a class="dropdown-item" href="#about">About</a></li>
-            <li><a class="dropdown-item" href="#services">Services</a></li>
-            <li><a class="dropdown-item" href="#porfolio">Portfolio</a></li>
-            <li>
-              <a class="dropdown-item" href="#testimonials">Testimonials</a>
-            </li>
-            <li><a class="dropdown-item" href="#contact">Contact</a></li>
-          </ul>
+          <div
+            class="offcanvas offcanvas-end"
+            tabindex="-1"
+            id="offcanvasRight"
+            aria-labelledby="offcanvasRightLabel"
+          >
+            <div class="offcanvas-header">
+              <h5 class="offcanvas-title" id="offcanvasRightLabel">
+                Offcanvas right
+              </h5>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="offcanvas"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="offcanvas-body">
+              <div class="">
+                Some text as placeholder. In real life you can have the elements
+                you have chosen. Like, text, images, lists, etc.
+              </div>
+              <ul class="">
+                <li><a class="dropdown-item" href="#home">Home</a></li>
+                <li><a class="dropdown-item" href="#about">About</a></li>
+                <li><a class="dropdown-item" href="#porfolio">Portfolio</a></li>
+                <li>
+                  <a class="dropdown-item" href="#testimonials">Testimonials</a>
+                </li>
+                <li><a class="dropdown-item" href="#contact">Contact</a></li>
+              </ul>
+            </div>
+          </div>
         </div>
       </div>
     </nav>
@@ -58,28 +82,25 @@
     <section class="home py-5" id="home">
       <div class="container-lg">
         <div class="row min-vh-100 align-items-center align-content-center">
-          <div class="col-md-6 mt-5 mt-md-0">
-            <div class="home-img text-center">
-              <img
-                class="portfolio-img rounded-circle mw-100"
-                src="./assets/images/portfolio.png"
-                alt=""
-              />
-            </div>
-          </div>
-          <div class="col-md-6 mt-5 mt-md-0 order-md-first">
-            <div class="home-text">
-              <p class="text-muted mb-1">Hello I'm</p>
-              <h1 class="text-danger text-uppercase fs-1 fw-bold">
-                Web Designer
+          <div class="col-lg-12 d-flex justify-content-center text-center">
+            <div class="home-text w-50">
+              <p class="text-muted mb-1">Hi, my name is</p>
+
+              <h1 class="fs-1 fw-bold text-danger text-uppercase">
+                Hi, I'm Md. Al-Amin
               </h1>
-              <h2 class="fs-4">Md. Al-Amin</h2>
+
               <p class="mt-4 text-muted">
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                Temporibus nihil dolores, accusantium dignissimos eius culpa
-                voluptatum.
+                I’m a software engineer specializing in building (and
+                occasionally designing) exceptional digital experiences.
+                Currently, I’m focused on building accessible, human-centered
+                products at Upstatement.
               </p>
-              <a href="/" class="btn btn-danger px-3 mt-3">My Work</a>
+              <a
+                href="/"
+                class="btn btn-danger fs-5 text-uppercase fw-bold px-5 py-3 mt-3"
+                >My Work</a
+              >
             </div>
           </div>
         </div>
@@ -100,36 +121,20 @@
         <div class="row">
           <div class="col-md-6">
             <div class="about-text">
-              <h3 class="fs-4 mb-3">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni,
-              </h3>
-              <p class="text-muted">
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugit
-                iste laborum repellat saepe, iusto fuga debitis velit facilis
-                impedit tenetur quas quae voluptatem, dignissimos amet delectus
-                officia maxime. Nostrum, laborum.
+              <h3 class="fs-2 mb-3">I build things for the web.</h3>
+              <p class="text-muted pe-5">
+                Hello! My name is Md. Al-Amin and I enjoy creating things that
+                live on the internet. My interest in web development started
+                back in 2019 when I decided to try editing localpress theme —
+                turns out hacking together a custom rig element taught me a lot
+                about HTML & CSS! Fast-forward to today, and I’ve had the
+                privilege of working at codember.com, a start-up, a huge
+                corporation, and a student-led design studio. My main focus
+                these days is building accessible, inclusive products and
+                digital experiences at Upstatement for a variety of clients.
               </p>
             </div>
-            <div class="row text-center text-uppercase my-3">
-              <div class="col-sm-4">
-                <div class="fact-tem">
-                  <h4 class="fs-1 fw-bold">100</h4>
-                  <p class="text-muted">Projects Complete</p>
-                </div>
-              </div>
-              <div class="col-sm-4">
-                <div class="fact-tem">
-                  <h4 class="fs-1 fw-bold">100</h4>
-                  <p class="text-muted">Happy Clients</p>
-                </div>
-              </div>
-              <div class="col-sm-4">
-                <div class="fact-tem">
-                  <h4 class="fs-1 fw-bold">100</h4>
-                  <p class="text-muted">Reviews</p>
-                </div>
-              </div>
-            </div>
+
             <div class="row">
               <div class="col-lg-12 d-flex align-items-center">
                 <a href="/" class="btn btn-danger px-3 me-5">Download CV</a>
@@ -151,7 +156,23 @@
             </div>
           </div>
           <div class="col-md-6 mt-5 mt-md-0">
-            <div class="skill-item mb-4">
+            <div class="text">
+              <h1 class="fs3">Experience</h1>
+              <div class="row mt-3">
+                <div class="col-lg-12">
+                  <h3 class="text-uppercase text-danger fs-5 fw-bold">
+                    Codember.com
+                  </h3>
+                  <p class="text-muted">Wordpress Theme development</p>
+                  <ul>
+                    <li>Customise localpress theme.</li>
+                    <li>Design with elementor.</li>
+                    <li>Create rig elements with html and css.</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <!-- <div class="skill-item mb-4">
               <h3 class="fs-6">Javascript</h3>
               <div
                 class="progress"
@@ -220,66 +241,16 @@
               >
                 <div class="progress-bar bg-danger" style="width: 50%"></div>
               </div>
-            </div>
+            </div> -->
           </div>
         </div>
       </div>
     </section>
     <!-- About Section End -->
 
-    <!-- Service Section Start -->
-
-    <section class="services py-5" id="services">
-      <div class="container-lg py-4">
-        <div class="row justify-content-center">
-          <div class="col-lg-8">
-            <div class="section-title text-center">
-              <h2 class="fw-bold mb-5">Services</h2>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-md-6 col-lg-4 text-center mb-5">
-            <div class="service-item shadow-sm py-4 px-2 rounded bg-white">
-              <div class="icon my-3 text-danger">
-                <i class="fas fa-code fs-4"></i>
-              </div>
-              <h3 class="fs-5 fw-bold py-2">Web Development</h3>
-              <p class="text-muted">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              </p>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-4 text-center mb-5">
-            <div class="service-item shadow-sm py-4 px-2 rounded bg-white">
-              <div class="icon my-3 text-danger">
-                <i class="fas fa-lightbulb fs-4"></i>
-              </div>
-              <h3 class="fs-5 fw-bold py-2">Creative Design</h3>
-              <p class="text-muted">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              </p>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-4 text-center mb-5">
-            <div class="service-item shadow-sm py-4 px-2 rounded bg-white">
-              <div class="icon my-3 text-danger">
-                <i class="fas fa-image fs-4"></i>
-              </div>
-              <h3 class="fs-5 fw-bold py-2">Photoshop</h3>
-              <p class="text-muted">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- Service Section End -->
-
     <!--  Portfolio Section Start -->
 
-    <section class="portfolio py-5" id="portfolio">
+    <section class="portfolio py-5" id="porfolio">
       <div class="container-lg py-4">
         <div class="row justify-content-center">
           <div class="col-lg-8">
@@ -457,7 +428,7 @@
 
     <!-- Testimonial Section Start -->
 
-    <section class="testimonials py-5">
+    <section class="testimonials py-5" id="testimonials">
       <div class="container-lg py-4">
         <div class="row justify-content-center">
           <div class="col-lg-8">
@@ -617,6 +588,105 @@
       </div>
     </section>
     <!-- Testimonial Section End -->
+
+    <!-- Contact Section Start -->
+    <section class="contact py-5" id="contact">
+      <div class="container-lg py-4">
+        <div class="row justify-content-center">
+          <div class="col-lg-8">
+            <div class="section-title text-center">
+              <h2 class="fw-bold mb-5">Contact</h2>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-5">
+            <div class="contact-item d-flex mb-3">
+              <div class="icon fs-4 text-danger">
+                <i class="fas fa-envelope"></i>
+              </div>
+              <div class="text ms-3">
+                <h3 class="fs-5">Email</h3>
+                <p class="text-muted">iammdalamin.343@gmail.com</p>
+              </div>
+            </div>
+            <div class="contact-item d-flex mb-3">
+              <div class="icon fs-4 text-danger">
+                <i class="fas fa-phone"></i>
+              </div>
+              <div class="text ms-3">
+                <h3 class="fs-5">Phone</h3>
+                <p class="text-muted">+880 183 598 8088</p>
+              </div>
+            </div>
+            <div class="contact-item d-flex mb-3">
+              <div class="icon fs-4 text-danger">
+                <i class="fas fa-map-marker-alt"></i>
+              </div>
+              <div class="text ms-3">
+                <h3 class="fs-5">Address</h3>
+                <p class="text-muted">26 Glartek, Mirpur, Dhaka</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-7">
+            <div class="contact-form">
+              <form action="">
+                <div class="row">
+                  <div class="col-lg-6 mb-4">
+                    <input
+                      type="text"
+                      placeholder="You Name"
+                      required
+                      class="form-control form-control-lg fs-6 border-0 shadow-sm"
+                    />
+                  </div>
+                  <div class="col-lg-6 mb-4">
+                    <input
+                      type="email"
+                      placeholder="You Email "
+                      required
+                      class="form-control form-control-lg fs-6 border-0 shadow-sm"
+                    />
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="col-lg-12 mb-4">
+                    <textarea
+                      type="text"
+                      placeholder="Message"
+                      required
+                      rows="5"
+                      class="form-control form-control-lg fs-6 border-0 shadow-sm"
+                    ></textarea>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-lg-12">
+                    <button type="submit" class="btn btn-danger">
+                      Send Message
+                    </button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Contact Section End -->
+    <!-- Footer Section Start -->
+    <footer class="footer border-top py-4">
+      <div class="container-lg">
+        <div class="row">
+          <div class="col-lg-12">
+            <p class="m-0 text-center text-muted">&copy; 2023 Md. Al-Amin</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- Footer Section End -->
 
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"

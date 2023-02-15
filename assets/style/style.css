@@ -15,6 +15,17 @@ button:focus {
   box-shadow: none;
 }
 
+.home {
+  color: #fff;
+  background: linear-gradient(
+      to right,
+      rgba(245, 245, 245, 0.8),
+      rgba(245, 245, 245, 0.8)
+    ),
+    url("../images/common-bg.svg");
+  background-size: contain;
+}
+
 .portfolio-img {
   height: 450px;
   width: 450px;
@@ -26,4 +37,10 @@ button:focus {
   width: 70px;
   border-radius: 50% !important;
   object-fit: cover;
+}
+.btn {
+  transition: all 0.5s ease-out !important;
+}
+.btn:hover {
+  transform: translateY(-10px);
 }
