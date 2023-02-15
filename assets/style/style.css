@@ -1,0 +1,28 @@
+.body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  background: #0a192f;
+  color: #fff;
+}
+
+button {
+  outline: none;
+}
+button:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+.portfolio-img {
+  height: 450px;
+  width: 400px;
+}
+
+.author-img {
+  height: 70px !important;
+  width: 70px;
+  border-radius: 50% !important;
+  object-fit: cover;
+}
