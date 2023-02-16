@@ -15,6 +15,11 @@ button:focus {
   box-shadow: none;
 }
 
+a {
+  text-decoration: none;
+  color: #eee;
+}
+
 .home {
   color: #fff;
   background: linear-gradient(
@@ -41,6 +46,23 @@ button:focus {
 .btn {
   transition: all 0.5s ease-out !important;
 }
-.btn:hover {
+.btn-danger:hover {
   transform: translateY(-10px);
+}
+
+.gallery-item.show {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.gallery-item.hide {
+  display: none;
 }
